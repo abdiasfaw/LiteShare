@@ -1,5 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LiteShare.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Name="DarkTheme">
+                <Grid BackgroundColor="Black">
+                    
+                </Grid>
+            </ControlTemplate>
+            <ControlTemplate x:Name="LightTheme">
+                <Grid BackgroundColor="White">
+                    
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
