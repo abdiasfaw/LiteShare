@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using LiteShare.Views;
 
 namespace LiteShare {
     public partial class App : Application {
