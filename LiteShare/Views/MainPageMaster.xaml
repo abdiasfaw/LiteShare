@@ -4,7 +4,7 @@
              x:Class="LiteShare.Views.MainPageMaster" 
              Title="Master">
 
-        <ListView x:Name="MenuItemsListView" SeparatorVisibility="Default" HasUnevenRows="true" ItemsSource="{Binding MenuItems}">
+        <ListView x:Name="MenuItemsListView" SeparatorVisibility="Default" SeparatorColor="Teal" IsEnabled="{Binding !HasSwitch}" HasUnevenRows="true" ItemsSource="{Binding MenuItems}">
             <ListView.Header>
                 <Grid BackgroundColor="#03A9F4">
                     <Grid.ColumnDefinitions>
@@ -13,19 +13,20 @@
                         <ColumnDefinition Width="10" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="30" />
+                        <!--<RowDefinition Height="30" />-->
                         <RowDefinition Height="80" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="10" />
                     </Grid.RowDefinitions>
-                    <Label Grid.Column="1" Grid.Row="2" Text="AppName" Style="{DynamicResource SubtitleStyle}" />
+                    <Label Grid.Column="1" Grid.Row="1" Text="LiteShare" FontSize="Large" Style="{DynamicResource SubtitleStyle}" />
                 </Grid>
             </ListView.Header>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
-                            <Label VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding Title}" FontSize="24" />
+                        <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" Padding="15,10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                            <Label VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" Text="{Binding Title}" FontSize="Medium" />
+                            <Switch IsVisible="{Binding HasSwitch}" Toggled="Handle_Toggled" HorizontalOptions="EndAndExpand"  />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

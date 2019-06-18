@@ -2,7 +2,15 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LiteShare.App">
     <Application.Resources>
         <ResourceDictionary>
-            
+            <ControlTemplate x:Key="DarkTheme">
+                <Grid BackgroundColor="Black">
+                    <Label Grid.Column="1" BackgroundColor="Black" TextColor="White"  />
+                    <Switch BackgroundColor="Black" HorizontalOptions="EndAndExpand" />
+                </Grid>
+            </ControlTemplate>
+            <ControlTemplate x:Key="LightTheme">
+                
+            </ControlTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

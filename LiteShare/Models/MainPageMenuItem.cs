@@ -9,8 +9,12 @@ namespace LiteShare.Views {
         public MainPageMenuItem() {
             TargetType = typeof(MainPageDetail);
         }
-        public int Id { get; set; }
+        static int id = 0;
+        public bool HasSwitch { get; set; } = false;
+
         public string Title { get; set; }
+
+        public string Id { get => $"listStyle{++id}"; }
 
         public Type TargetType { get; set; }
     }
