@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LiteShare.Views.StartPage"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:util="clr-namespace:LiteShare.Services"
+             BackgroundColor="CornflowerBlue">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Grid.ColumnSpan="2"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+            <Image.Source>
+                <FontImageSource  Glyph="LS"
+                                  FontFamily="{OnPlatform iOS=Monoton-Regular, Android=Monoton-Regular.ttf#}"
+                                  Size="55" />
+            </Image.Source>
+        </Image>
+        <ImageButton Source="{util:ImageResource LiteShare.Images.upload_100x100.png}"
+                     d:Source="upload_100x100.png"
+                     Scale="1.4"
+                     Grid.Column="0"
+                     Grid.Row="1"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Start" />
+        <ImageButton Source="{util:ImageResource LiteShare.Images.download_100x100.png}"
+                     d:Source="download_100x100.png"
+                     Scale="1.4"
+                     Grid.Column="1"
+                     Grid.Row="1"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Start" />
+    </Grid>
+</ContentPage>

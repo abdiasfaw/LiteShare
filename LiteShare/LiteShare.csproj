@@ -30,5 +30,18 @@
     <Folder Include="Views\" />
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Images\app_icon.png" />
+    <None Remove="Images\download_100x100.png" />
+    <None Remove="Images\play_button_overlay.png" />
+    <None Remove="Images\upload_100x100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\app_icon.png" />
+    <EmbeddedResource Include="Images\download_100x100.png" />
+    <EmbeddedResource Include="Images\play_button_overlay.png" />
+    <EmbeddedResource Include="Images\upload_100x100.png" />
   </ItemGroup>
 </Project>

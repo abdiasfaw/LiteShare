@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LiteShare.Views.ApplicationsPage"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:util="clr-namespace:LiteShare.Services"
+             Title="Applications"
+             NavigationPage.HasNavigationBar="True">
+    <CollectionView SelectionMode="Multiple"
+                    ItemSizingStrategy="MeasureFirstItem">
+        <d:CollectionView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>google_classroom.png</x:String>
+                <x:String>google_plus.png</x:String>
+                <x:String>google_playstore.png</x:String>
+                <x:String>microsoft_one_note.png</x:String>
+                <x:String>microsoft_outlook.png</x:String>
+                <x:String>microsoft_publisher.png</x:String>
+            </x:Array>
+        </d:CollectionView.ItemsSource>
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical"
+                             Span="4" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding ApplicationIcon}"
+                        d:Source="{Binding .}"
+                        Margin="15" />
+                    <Label Text="{Binding ApplicationName}"
+                        d:Text="{Binding .}"
+                        Margin="5"
+                        Grid.Row="1" />
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        <CollectionView.EmptyView>
+            <StackLayout HorizontalOptions="Fill"
+                         VerticalOptions="Fill">
+                <Image Source="{util:ImageResource LiteShare.Images.app_icon.png}"
+                       d:Source="{util:ImageResource LiteShare.Images.app_icon.png}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Text="No installed applications detected"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       HorizontalTextAlignment="Center" />
+            </StackLayout>
+        </CollectionView.EmptyView>
+    </CollectionView>
+</ContentPage>

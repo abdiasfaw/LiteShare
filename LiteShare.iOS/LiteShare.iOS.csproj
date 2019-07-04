@@ -70,6 +70,7 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\WifiService.cs" />
+    <Compile Include="Services\MediaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -115,6 +116,33 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\Default-568h%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\Default-Portrait.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\Default-Portrait%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\Default.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\Default%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\Monoton-Regular.ttf" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\african_safari.jpg" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\asap_rocky_testing.jpg" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\bitcoin.jpeg" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\black_panther.jpg" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\download_100x100.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\google_classroom.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\google_playstore.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\google_plus.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\hound_vs_mountain.jpg" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\james_blake_assume_form.jpg" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\jay_rock_redemption.jpg" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\microsoft-publisher.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\microsoft_one_note.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\microsoft_outlook.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\play_button_overlay.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\spark_me_up.PNG" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\the_legend_of_korra.jpg" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\travis_scott_astroworld.jpg" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Image.imageset\upload_100x100.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -140,5 +168,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Monoton-Regular.ttf" />
   </ItemGroup>
 </Project>

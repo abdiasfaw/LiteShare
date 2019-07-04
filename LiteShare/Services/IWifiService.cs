@@ -4,10 +4,10 @@ namespace LiteShare.Services {
     public interface IWifiService {
         bool IsWifiOn();
         bool TurnOnWifi();
+        bool TurnOffWifi();
         List<string> AvailableWifiAPs();
-        bool ConnectToWifi(string ssid, string password);
-        void DisconnectFromWifi();
-        bool TurnOnWifiHotSpot();
-        void TurnOffWifiHotSpot();
+        bool ConnectToWifi(int netId);
+        bool DisconnectFromWifi();
+        void ToggleWifiHotspot(bool On);
     }
 }
