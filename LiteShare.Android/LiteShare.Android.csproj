@@ -94,6 +94,15 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\Save.jpg" />
+    <AndroidResource Include="Resources\drawable\Close.jpg" />
+    <AndroidResource Include="Resources\drawable\CheckboxOff.jpg" />
+    <AndroidResource Include="Resources\drawable\CheckboxOn.jpg" />
+    <AndroidResource Include="Resources\drawable\Share.jpg" />
+    <AndroidResource Include="Resources\drawable\RadioOn.jpg" />
+    <AndroidResource Include="Resources\drawable\Search.jpg" />
+    <AndroidResource Include="Resources\drawable\Menu.jpg" />
+    <AndroidResource Include="Resources\drawable\RadioOff.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

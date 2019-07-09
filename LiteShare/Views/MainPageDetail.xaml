@@ -1,9 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LiteShare.Views.MainPageDetail"
-             Title="Detail">
-    <StackLayout Padding="10">
-        <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it." />
-    </StackLayout>
+             Title="Detail"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0,30,0,0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Search"
+                       Keyboard="Text" />
+            
+            <ListView x:Name="lst"
+                      ItemsSource="{Binding SelectedFolder}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+<!--                                <Image Source="{Binding IconSource}" />-->
+                                <Label Text="{Binding Path}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

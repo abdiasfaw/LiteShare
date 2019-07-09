@@ -5,6 +5,6 @@ using LiteShare.Models;
 
 namespace LiteShare.Services {
     public interface IPackageInfo {
-        IEnumerable<Application> GetInstalledApps();
+        IEnumerable<Package> GetInstalledApps();
     }
 }
