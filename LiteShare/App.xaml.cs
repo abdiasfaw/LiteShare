@@ -8,7 +8,7 @@ namespace LiteShare {
         public App() {
             InitializeComponent();
             //MainPage = new NavigationPage(new StartPage());
-            MainPage = new FilesPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart() {

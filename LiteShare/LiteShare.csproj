@@ -25,6 +25,7 @@
     <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
     <PackageReference Include="Plugin.FileUploader" Version="1.4.0" />
+    <PackageReference Include="Shiny.Net.Http" Version="1.0.0.264-beta" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
@@ -38,11 +39,15 @@
     <None Remove="Images\download_100x100.png" />
     <None Remove="Images\play_button_overlay.png" />
     <None Remove="Images\upload_100x100.png" />
+    <None Remove="Images\phone.png" />
+    <None Remove="Images\MicroSD.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\app_icon.png" />
     <EmbeddedResource Include="Images\download_100x100.png" />
     <EmbeddedResource Include="Images\play_button_overlay.png" />
     <EmbeddedResource Include="Images\upload_100x100.png" />
+    <EmbeddedResource Include="Images\phone.png" />
+    <EmbeddedResource Include="Images\MicroSD.png" />
   </ItemGroup>
 </Project>

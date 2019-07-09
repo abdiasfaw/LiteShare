@@ -6,21 +6,41 @@
         <OnPlatform x:TypeArguments="Thickness" iOS="0,30,0,0" />
     </ContentPage.Padding>
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <SearchBar Placeholder="Search"
                        Keyboard="Text" />
             
-            <ListView ItemsSource="{Binding Folders}">
+            <ListView x:Name="FolderList" 
+                      ItemsSource="{Binding Folders}" 
+                      ItemSelected="Handle_ItemSelected" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
+                        <ImageCell ImageSource="folder.png" Text="{Binding Name}" Detail="{Binding Path}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <ListView x:Name="FileList" 
+                      ItemsSource="{Binding FilesList}"
+                      VerticalOptions="FillAndExpand" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+<!--                        <ImageCell ImageSource="file.png" Text="{Binding Title}" Detail="{Binding FullPath}" />-->
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Name}" />
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Image Source="file.png" />
+                                <StackLayout >
+                                    <Label Text="{Binding Title}" />
+                                    <Label Text="{Binding FullPath}" FontSize="Micro"/>
+                                </StackLayout>
+                                <Switch IsToggled="{Binding Queued}" Toggled="Handle_Toggled" HorizontalOptions="EndAndExpand" />
                             </StackLayout>
+                            
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <ImageButton BackgroundColor="Black" x:Name="sendButton" Source="send.png" Clicked="SendButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="End" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

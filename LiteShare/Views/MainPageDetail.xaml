@@ -5,28 +5,24 @@
              Title="Detail"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:LiteShare.Services"
              mc:Ignorable="d">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0,30,0,0" />
     </ContentPage.Padding>
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar Placeholder="Search"
+           <SearchBar Placeholder="Search local files"
                        Keyboard="Text" />
             
-            <ListView x:Name="lst"
-                      ItemsSource="{Binding SelectedFolder}">
+            <ListView x:Name="ListFolders" ItemsSource="{Binding DetailItems}" ItemSelected="Handle_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal">
-<!--                                <Image Source="{Binding IconSource}" />-->
-                                <Label Text="{Binding Path}" />
-                            </StackLayout>
-                        </ViewCell>
+                        <ImageCell x:Name="img" ImageSource="{Binding ImageIcon}" Text="{Binding Title}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

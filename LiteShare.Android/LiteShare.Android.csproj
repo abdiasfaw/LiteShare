@@ -103,6 +103,11 @@
     <AndroidResource Include="Resources\drawable\Search.jpg" />
     <AndroidResource Include="Resources\drawable\Menu.jpg" />
     <AndroidResource Include="Resources\drawable\RadioOff.jpg" />
+    <AndroidResource Include="Resources\drawable\MicroSD.png" />
+    <AndroidResource Include="Resources\drawable\phone.png" />
+    <AndroidResource Include="Resources\drawable\folder.png" />
+    <AndroidResource Include="Resources\drawable\file.png" />
+    <AndroidResource Include="Resources\drawable\send.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
